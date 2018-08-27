@@ -1,21 +1,26 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
-const logoUri = 'images/leaf_logo.png';
+import Notebook from './components/Notebook';
+import Cover from './components/Cover';
+import TableOfContents from './components/TableOfContents';
+import Random from './components/Random';
+import Search from './components/Search';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <div>
-          <header className="App-header">
-            <img src={logoUri} className="App-logo" alt="logo" />
-            <h1 className="App-title">Plantadex</h1>
-            <h2>A Pokedex for plants</h2>
-          </header>
-          <p className="App-intro">
-            To get started, edit <code>src/App.js</code> and save to reload.
-          </p>
-        </div>
+        <Notebook>
+          <Router>
+            <div>
+              <Route exact path="/" component={Cover} />
+              <Route path="/contents" component={TableOfContents} />
+              <Route path="/random" component={Random} />
+              <Route path="/search" component={Search} />
+            </div>
+          </Router>
+        </Notebook>
       </div>
     );
   }
