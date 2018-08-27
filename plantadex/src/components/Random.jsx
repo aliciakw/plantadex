@@ -1,5 +1,5 @@
 import React from 'react';
-import BackToCover from '../partials/BackToCover';
+import BackToCover from './partials/BackToCover';
 
 const Random = () => (
   <div>

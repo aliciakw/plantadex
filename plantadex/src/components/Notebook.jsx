@@ -13,19 +13,15 @@ const Wrapper = styled.main`
   margin-left: -${wrapperWidth / 2}px;
   background: white;
   transition: margin .5s;
-`;
-const PageBody = styled.div`
-  border: 1px solid black;
-`;
-const PageFooter = styled.div`
-  border: 1px solid pink;
+  overflow: hidden;
+  text-align: center;
 `;
 
 class Notebook extends Component {
   constructor(props) {
     super(props); // WHY DO WE DO THIS
     this.state = {
-      wrapperMarginTop: -800
+      wrapperMarginTop: -900
     };
   }
   componentDidMount() {
