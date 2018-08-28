@@ -5,6 +5,8 @@ GEM
     rack (2.0.5)
     rack-protection (2.0.3)
       rack
+    rack-ssl (1.4.1)
+      rack
     sequel (5.11.0)
     sinatra (2.0.3)
       mustermann (~> 1.0)
@@ -17,6 +19,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  rack-ssl
   sequel
   sinatra
 

@@ -31,5 +31,6 @@ plant_data = [
 ]
 
 get '/api/plants' do
+  content_type :json
   plant_data.to_json
 end

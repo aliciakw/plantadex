@@ -8,14 +8,15 @@ export default (state = plantInitialState, action) => {
   switch (action.type) {
     case 'REQUEST_PLANTS':
       return {
-        isMakingRequest: true,
-        ...state
+        ...state,
+        isMakingRequest: true
       };
     case 'REQUEST_PLANTS_SUCCESS':
+      console.log(state, action);
       return {
         isMakingRequest: false,
         hasError: false,
-        data: action.plants
+        data: action.data
       };
     case 'REQUEST_PLANTS_FAILURE':
       return {
